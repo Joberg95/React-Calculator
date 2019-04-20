@@ -3,8 +3,8 @@ import ResultComponent from "../src/components/ResultComponent";
 import KeyPadComponent from "../src/components/KeypadComponent";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       result: ""
     };
@@ -16,7 +16,7 @@ class App extends Component {
     } else if (button === "C") {
       this.reset();
     } else if (button === "CE") {
-      this.backspace;
+      this.backspace()
     } else {
       this.setState({
         result: this.state.result + button
